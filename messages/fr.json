@@ -1,4 +1,68 @@
 {
-  "hello": "Bonjour",
-  "welcome": "Bienvenue dans mon application"
+  "Navbar": {
+    "home": "Accueil",
+    "product": "Produit",
+    "about": "À propos",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "badge": "Innovation dans les soins de santé",
+    "title": "Application mobile connectée à votre inhalateur",
+    "description": "Notre application mobile révolutionnaire se connecte à votre inhalateur intelligent pour vous aider à gérer efficacement votre asthme. Surveillez votre santé, recevez des informations personnalisées et respirez plus facilement.",
+    "cta": "Télécharger l'app",
+    "subtitle": "Prenez le contrôle de votre respiration",
+    "subtitle_desc": "Notre application mobile se synchronise avec votre dispositif d'inhalation, fournissant des données en temps réel et des informations exploitables. Rejoignez des milliers de personnes qui ont amélioré leur gestion de l'asthme avec notre solution connectée.",
+    "satisfaction": "Satisfaction",
+    "users": "Utilisateurs actifs",
+    "featuresTitle": "Pourquoi choisir notre application ?",
+    "feature1Title": "Surveillance en temps réel",
+    "feature1Desc": "L'application suit automatiquement l'utilisation de votre inhalateur et vos schémas respiratoires via Bluetooth",
+    "feature2Title": "Alertes intelligentes",
+    "feature2Desc": "Recevez des notifications pour vos médicaments et des conseils personnalisés directement sur votre téléphone",
+    "feature3Title": "Tableaux de bord détaillés",
+    "feature3Desc": "Analysez vos données d'asthme avec des graphiques interactifs et partagez-les avec votre médecin"
+  },
+  "AppFeatures": {
+    "title": "Fonctionnalités de l'Application",
+    "subtitle": "Découvrez comment notre application transforme la gestion de votre asthme avec des fonctionnalités innovantes",
+    "feature1Title": "Connexion Bluetooth",
+    "feature1Desc": "Connectez automatiquement votre inhalateur à l'application via Bluetooth pour un suivi sans effort.",
+    "feature2Title": "Rappels Intelligents",
+    "feature2Desc": "Recevez des notifications push pour vos doses quotidiennes et ne manquez jamais votre traitement.",
+    "feature3Title": "Suivi des Données",
+    "feature3Desc": "Visualisez vos statistiques d'utilisation avec des graphiques détaillés et des rapports hebdomadaires.",
+    "feature4Title": "Interface Intuitive",
+    "feature4Desc": "Une application simple et élégante conçue pour tous les âges, du plus jeune au plus âgé.",
+    "cta": "Télécharger l'Application"
+  },
+  "About": {
+    "title": "Rencontrez notre équipe",
+    "subtitle": "Nous sommes une équipe passionnée dédiée à l'amélioration de la gestion de l'asthme grâce à une technologie innovante.",
+    "mouadName": "Mouad",
+    "mouadRole": "Co-fondateur & Développeur Principal",
+    "mouadDesc": "Passionné par la technologie et la santé, Mouad dirige le développement de notre solution pour la rendre intuitive et efficace.",
+    "inassName": "Inass",
+    "inassRole": "Co-fondatrice & Designer Produit",
+    "inassDesc": "Avec un œil pour le design et l'expérience utilisateur, Inass s'assure que notre application est simple, belle et accessible à tous."
+  },
+  "Contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous serions ravis d'avoir de vos nouvelles ! Envoyez-nous un message et nous vous répondrons dès que possible.",
+    "formTitle": "Envoyer un message",
+    "nameLabel": "Nom complet",
+    "namePlaceholder": "Jean Dupont",
+    "emailLabel": "Adresse e-mail",
+    "emailPlaceholder": "vous@exemple.com",
+    "messageLabel": "Votre message",
+    "messagePlaceholder": "Écrivez votre message ici...",
+    "submitButton": "Envoyer le message",
+    "infoTitle": "Coordonnées",
+    "infoSubtitle": "Retrouvez-nous à l'adresse suivante ou contactez-nous par téléphone ou e-mail.",
+    "address": "123 Rue de l'Innovation, Ville Tech, 12345",
+    "phone": "+33 1 23 45 67 89",
+    "email": "contact@inhalerapp.com"
+  },
+  "Footer": {
+    "rights": "Tous droits réservés."
+  }
 }
