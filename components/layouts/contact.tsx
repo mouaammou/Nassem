@@ -89,15 +89,15 @@ export default function Contact() {
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
-                  <MapPin className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                  <MapPin className="w-6 h-6 text-blue-600 mt-1 shrink-0" />
                   <p className="text-gray-700">{t('address', { defaultValue: '123 Innovation Drive, Tech City, 12345' })}</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Phone className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                  <Phone className="w-6 h-6 text-blue-600 mt-1 shrink-0" />
                   <p className="text-gray-700">{t('phone', { defaultValue: '+1 (555) 123-4567' })}</p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <Mail className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
+                  <Mail className="w-6 h-6 text-blue-600 mt-1 shrink-0" />
                   <p className="text-gray-700">{t('email', { defaultValue: 'contact@inhalerapp.com' })}</p>
                 </div>
               </div>

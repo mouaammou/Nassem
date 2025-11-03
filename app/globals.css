@@ -1,48 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
-
 @import "tailwindcss";
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-baloo: "Baloo Bhaijaan 2", sans-serif;
-  --font-rubik: "Rubik", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-rubik);
+  --font-rubik: var(--font-rubik-family);
+  --font-baloo: var(--font-baloo-family);
+  /* Map Tailwind font token to the actual family variable */
+  --font-lobster-two: var(--font-lobster-two-family);
+  --font-lobster: var(--font-lobster-family);
 }
-
-/* Font utility classes */
-.font-baloo {
-  font-family: var(--font-baloo);
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.font-rubik {
-  font-family: var(--font-rubik);
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-/* Font weights for Baloo Bhaijaan 2 */
-.font-baloo-regular { font-weight: 400; }
-.font-baloo-medium { font-weight: 500; }
-.font-baloo-semibold { font-weight: 600; }
-.font-baloo-bold { font-weight: 700; }
-.font-baloo-extrabold { font-weight: 800; }
-
-/* Font weights for Rubik */
-.font-rubik-light { font-weight: 300; }
-.font-rubik-regular { font-weight: 400; }
-.font-rubik-medium { font-weight: 500; }
-.font-rubik-semibold { font-weight: 600; }
-.font-rubik-bold { font-weight: 700; }
-.font-rubik-extrabold { font-weight: 800; }
-.font-rubik-black { font-weight: 900; }
 
 body {
   background: var(--background);

@@ -11,13 +11,13 @@ export default function Home() {
   return (
     <>
       {/* header -- */}
-      <header className="container mx-auto w-full">
+      <header>
         <Navbar />
         <Hero />
       </header>
 
       {/* Main */}
-      <main>
+      <main className="container mx-auto">
         <AppFeatures />
         <AboutUs />
         <Contact />

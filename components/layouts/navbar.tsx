@@ -14,6 +14,7 @@ export default function Navbar() {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const isRTL = locale === 'ar';
+  const fontClass = isRTL ? 'font-baloo' : 'font-rubik'; // add this
 
   const links = [
     { href: '/', label: t('home') },
@@ -28,20 +29,21 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-white fixed w-full top-0 z-50" dir={isRTL ? 'rtl' : 'ltr'}>
+    <nav className={`bg-white fixed w-full top-0 z-50 ${fontClass}`} dir={isRTL ? 'rtl' : 'ltr'}>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24">
           {/* Logo */}
           <Link href="/" className="">
-            <div className="border-2 border-gray-300 rounded-full p-1 hover:border-blue-400 transition-colors">
+            <div className="">
               <Image 
                 width={60}
                 height={60}
                 alt='Inhaler logo'
-                src="/inhaler.png"
+                src="/logo.png"
                 className='rounded-full'
               />
+              <h1 className='font-lobster text-xl'>Nassem</h1>
             </div>
           </Link>
 
@@ -54,8 +56,7 @@ export default function Navbar() {
                   href={link.href}
                   className={clsx(
                     'text-gray-700 hover:text-blue-600 font-medium text-base transition-colors relative',
-                    pathname === link.href && 'text-blue-600',
-                    pathname === link.href && 'after:absolute after:-bottom-2 after:left-0 after:w-full after:h-0.5 after:bg-blue-600'
+                    isRTL && "text-xl"
                   )}
                 >
                   {link.label}
@@ -70,8 +71,8 @@ export default function Navbar() {
               onClick={switchLanguage}
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 border-2 border-gray-300 rounded-lg hover:border-blue-400 transition-all"
             >
-              <Languages size={18} />
-              <span className="font-semibold">
+              <Languages size={17} />
+              <span className="text-xs  font-semibold">
                 {locale === 'fr' ? 'العربية' : 'Français'}
               </span>
             </button>
