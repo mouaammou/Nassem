@@ -1,51 +1,46 @@
 'use client';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Smartphone, Bell, BarChart3, Bluetooth } from 'lucide-react';
+import DownloadButtons from '../ui/DownloadButtons';
 
 export default function AppFeatures() {
   const t = useTranslations('AppFeatures');
 
   const features = [
     {
-      image: '/appFeatures/app_feature_1.png',
-      icon: <Bluetooth className="w-8 h-8 text-blue-600" />,
+      image: '/mockup-3.png',
       title: t('feature1Title', { defaultValue: 'Connexion Bluetooth' }),
       description: t('feature1Desc', { defaultValue: 'Connectez automatiquement votre inhalateur à l\'application via Bluetooth pour un suivi sans effort.' }),
       color: 'blue'
     },
     {
-      image: '/appFeatures/app_feature_2.png',
-      icon: <Bell className="w-8 h-8 text-green-600" />,
+      image: '/mockup-6.png',
       title: t('feature2Title', { defaultValue: 'Rappels Intelligents' }),
       description: t('feature2Desc', { defaultValue: 'Recevez des notifications push pour vos doses quotidiennes et ne manquez jamais votre traitement.' }),
       color: 'green'
     },
     {
-      image: '/appFeatures/app_feature_3.png',
-      icon: <BarChart3 className="w-8 h-8 text-purple-600" />,
-      title: t('feature3Title', { defaultValue: 'Suivi des Données' }),
-      description: t('feature3Desc', { defaultValue: 'Visualisez vos statistiques d\'utilisation avec des graphiques détaillés et des rapports hebdomadaires.' }),
+      image: '/mockup-2.png',
+      title: t('feature3Title', { defaultValue: 'Carte Météo Interactive' }),
+      description: t('feature3Desc', { defaultValue: 'Consultez les conditions météorologiques en temps réel sur une carte interactive pour anticiper les facteurs environnementaux.' }),
       color: 'purple'
     },
     {
-      image: '/appFeatures/app_feature_4.png',
-      icon: <Smartphone className="w-8 h-8 text-orange-600" />,
-      title: t('feature4Title', { defaultValue: 'Interface Intuitive' }),
-      description: t('feature4Desc', { defaultValue: 'Une application simple et élégante conçue pour tous les âges, du plus jeune au plus âgé.' }),
+      image: '/mockup-7.png',
+      title: t('feature4Title', { defaultValue: 'Suivi des Données' }),
+      description: t('feature4Desc', { defaultValue: 'Visualisez vos statistiques d\'utilisation avec des graphiques détaillés et des rapports hebdomadaires complets.' }),
       color: 'orange'
+    },
+    {
+      image: '/mockup-5.png',
+      title: t('feature5Title', { defaultValue: 'Interface Intuitive' }),
+      description: t('feature5Desc', { defaultValue: 'Une application simple et élégante conçue pour tous les âges, du plus jeune au plus âgé.' }),
+      color: 'pink'
     }
   ];
 
-  const colorClasses = {
-    blue: 'from-blue-50 to-blue-100',
-    green: 'from-green-50 to-green-100',
-    purple: 'from-purple-50 to-purple-100',
-    orange: 'from-orange-50 to-orange-100'
-  };
-
   return (
-    <section className="py-20 bg-linear-to-b from-white to-gray-50">
+    <section className="py-20">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -62,31 +57,25 @@ export default function AppFeatures() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-8 lg:gap-12`}
+              className={` flex max-lg:flex-wrap  items-center gap-3 justify-center md:gap-0 ${index % 2 === 1  ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}
             >
               {/* Image Section */}
-              <div className="flex-1 w-full">
+              <div className="">
                 <div className="relative">
-                  <div className={`absolute -inset-4 rounded-3xl`}></div>
-                  <div className="">
-                    <Image
+                    <img
                       src={feature.image}
                       alt={feature.title}
                       width={1600}
                       height={1400}
-                      className=" h-160 object-contain"
+                      className="sm:w-full sm:h-190 object-cover"
                     />
-                  </div>
                 </div>
               </div>
 
               {/* Text Section */}
-              <div className="flex-1 w-60">
-                <div className={`p-8 lg:p-12 rounded-3xl shadow-lg hover:shadow-xl transition-shadow`}>
-                  <div className="space-y-4">
-                    <div className="inline-block px-4 py-2 bg-white rounded-full text-sm font-semibold text-gray-700 shadow-md">
-                      Fonctionnalité {index + 1}
-                    </div>
+              <div className="w-full">
+                <div className={`p-8`}>
+                  <div className="space-y-4 sm:px-10 px-0">
                     <h3 className="text-3xl lg:text-4xl font-bold text-gray-900">
                       {feature.title}
                     </h3>
@@ -101,10 +90,8 @@ export default function AppFeatures() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-20">
-          <button className="px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300">
-            {t('cta', { defaultValue: 'Télécharger l\'Application' })}
-          </button>
+        <div className="text-center">
+            <DownloadButtons />
         </div>
       </div>
     </section>

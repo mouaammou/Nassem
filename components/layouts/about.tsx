@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { Linkedin, Github, Twitter } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 export default function AboutUs() {
   const t = useTranslations('About');
@@ -11,9 +11,9 @@ export default function AboutUs() {
       name: t('mouadName'),
       role: t('mouadRole'),
       description: t('mouadDesc'),
-      image: '/team/mouad.jpg', // Replace with your image path
+      image: '/mouad.jpeg', // Replace with your image path
       socials: {
-        linkedin: 'https://linkedin.com/in/mouad', // Replace with your link
+        linkedin: 'https://linkedin.com/in/mouad-ouaammou-36a7b8175/', // Replace with your link
         github: 'https://github.com/mouad',       // Replace with your link
         twitter: 'https://twitter.com/mouad',     // Replace with your link
       },
@@ -22,9 +22,9 @@ export default function AboutUs() {
       name: t('inassName'),
       role: t('inassRole'),
       description: t('inassDesc'),
-      image: '/team/inass.jpg', // Replace with your partner's image path
+      image: '/inass.jpeg', // Replace with your partner's image path
       socials: {
-        linkedin: 'https://linkedin.com/in/inass', // Replace with partner's link
+        linkedin: 'https://linkedin.com/in/inass-el-yesri-044575317/', // Replace with partner's link
         github: 'https://github.com/inass',       // Replace with partner's link
         twitter: 'https://twitter.com/inass',     // Replace with partner's link
       },
@@ -59,9 +59,6 @@ export default function AboutUs() {
                   height={128}
                   className="rounded-full object-cover shadow-lg border-4 border-white"
                 />
-                <div className="absolute bottom-0 right-0 bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold shadow-md">
-                  {member.name.charAt(0)}
-                </div>
               </div>
 
               <h3 className="text-2xl font-bold text-gray-900">{member.name}</h3>
@@ -72,12 +69,6 @@ export default function AboutUs() {
               <div className="flex justify-center gap-4">
                 <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-700 transition-colors">
                   <Linkedin size={24} />
-                </a>
-                <a href={member.socials.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-gray-900 transition-colors">
-                  <Github size={24} />
-                </a>
-                <a href={member.socials.twitter} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-sky-500 transition-colors">
-                  <Twitter size={24} />
                 </a>
               </div>
             </div>

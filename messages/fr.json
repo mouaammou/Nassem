@@ -25,13 +25,15 @@
     "title": "Fonctionnalités de l'Application",
     "subtitle": "Découvrez comment notre application transforme la gestion de votre asthme avec des fonctionnalités innovantes",
     "feature1Title": "Connexion Bluetooth",
-    "feature1Desc": "Connectez automatiquement votre inhalateur à l'application via Bluetooth pour un suivi sans effort.",
+    "feature1Desc": "Connectez automatiquement votre inhalateur à l'application via Bluetooth pour un suivi sans effort. La synchronisation se fait en temps réel, permettant une collecte précise des données d'utilisation. Aucune configuration complexe nécessaire - il suffit d'activer le Bluetooth et l'application détecte automatiquement votre dispositif. Profitez d'une connexion stable et sécurisée qui respecte votre vie privée.",
     "feature2Title": "Rappels Intelligents",
-    "feature2Desc": "Recevez des notifications push pour vos doses quotidiennes et ne manquez jamais votre traitement.",
-    "feature3Title": "Suivi des Données",
-    "feature3Desc": "Visualisez vos statistiques d'utilisation avec des graphiques détaillés et des rapports hebdomadaires.",
-    "feature4Title": "Interface Intuitive",
-    "feature4Desc": "Une application simple et élégante conçue pour tous les âges, du plus jeune au plus âgé.",
+    "feature2Desc": "Recevez des notifications push personnalisées pour vos doses quotidiennes et ne manquez jamais votre traitement. L'application apprend vos habitudes et ajuste les rappels en conséquence. Configurez des alertes pour vos différents médicaments avec des horaires flexibles. Les notifications intelligentes s'adaptent à votre emploi du temps et peuvent être reportées si nécessaire.",
+    "feature3Title": "Carte Météo Interactive",
+    "feature3Desc": "Consultez les conditions météorologiques en temps réel sur une carte interactive pour anticiper les facteurs environnementaux. Visualisez la vitesse et la direction du vent dans votre région pour éviter les zones à risque. Recevez des alertes personnalisées sur la qualité de l'air, le pollen et les conditions météorologiques défavorables. Planifiez vos sorties en toute sécurité grâce aux prévisions détaillées adaptées aux asthmatiques.",
+    "feature4Title": "Suivi des Données",
+    "feature4Desc": "Visualisez vos statistiques d'utilisation avec des graphiques détaillés et des rapports hebdomadaires complets. Suivez l'évolution de votre traitement au fil du temps grâce à des tableaux de bord interactifs. Identifiez les tendances et les facteurs déclencheurs de vos crises d'asthme. Exportez vos données pour les partager facilement avec votre médecin lors de vos consultations.",
+    "feature5Title": "Interface Intuitive",
+    "feature5Desc": "Une application simple et élégante conçue pour tous les âges, du plus jeune au plus âgé. L'interface claire et moderne facilite la navigation quotidienne. Chaque fonctionnalité est accessible en quelques clics seulement. Design responsive qui s'adapte parfaitement à tous les appareils mobiles. Accessible aux personnes ayant des besoins spécifiques avec des options de contraste et de taille de texte ajustables.",
     "cta": "Télécharger l'Application"
   },
   "About": {
@@ -63,5 +65,8 @@
   },
   "Footer": {
     "rights": "Tous droits réservés."
+  },
+  "Download": {
+    "downloadApp": "Téléchargez l'application"
   }
 }
