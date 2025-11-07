@@ -32,7 +32,7 @@ export default function AboutUs() {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-white" id='about'>
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -49,7 +49,7 @@ export default function AboutUs() {
           {team.map((member, index) => (
             <div
               key={index}
-              className="group bg-gray-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-gray-100"
+              className="group bg-gray-50 rounded-3xl p-8 text-center hover:-translate-y-2 transition-all duration-300 border border-gray-100"
             >
               <div className="relative w-32 h-32 mx-auto mb-6">
                 <Image

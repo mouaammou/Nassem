@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-linear-to-b from-gray-50 to-white border-t border-gray-200">
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
           <div className="space-y-4">
@@ -25,11 +25,11 @@ export default function Footer() {
                   src="/logo.png"
                   className='rounded-full'
                 />
-                <h1 className='font-lobster text-2xl text-gray-800'>Nassem</h1>
+                <h1 className='font-lobster text-2xl text-sky-700'>Nassem</h1>
               </div>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Transforming asthma management with innovative technology and smart solutions.
+              {t("brand")}
             </p>
             <div className="flex gap-4 pt-2">
               <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-sky-500 hover:text-white transition-all">
@@ -49,22 +49,22 @@ export default function Footer() {
             <h3 className="font-bold text-gray-900 mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                <Link href="#" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
                   {tNav('home')}
                 </Link>
               </li>
               <li>
-                <Link href="/product" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                <Link href="#produit" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
                   {tNav('product')}
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                <Link href="#about" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
                   {tNav('about')}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+                <Link href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
                   {tNav('contact')}
                 </Link>
               </li>

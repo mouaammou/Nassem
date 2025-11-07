@@ -49,21 +49,12 @@
   "Contact": {
     "title": "Contactez-nous",
     "subtitle": "Nous serions ravis d'avoir de vos nouvelles ! Envoyez-nous un message et nous vous répondrons dès que possible.",
-    "formTitle": "Envoyer un message",
-    "nameLabel": "Nom complet",
-    "namePlaceholder": "Jean Dupont",
-    "emailLabel": "Adresse e-mail",
-    "emailPlaceholder": "vous@exemple.com",
-    "messageLabel": "Votre message",
-    "messagePlaceholder": "Écrivez votre message ici...",
-    "submitButton": "Envoyer le message",
-    "infoTitle": "Coordonnées",
-    "infoSubtitle": "Retrouvez-nous à l'adresse suivante ou contactez-nous par téléphone ou e-mail.",
-    "address": "123 Rue de l'Innovation, Ville Tech, 12345",
-    "phone": "+33 1 23 45 67 89",
+    "address": "Agadir, Maroc",
+    "phone": "+212 698-027560",
     "email": "contact@inhalerapp.com"
   },
   "Footer": {
+    "brand": "Transformer la gestion de l’asthme grâce à une technologie innovante et des solutions intelligentes.",
     "rights": "Tous droits réservés."
   },
   "Download": {

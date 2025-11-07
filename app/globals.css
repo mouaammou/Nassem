@@ -16,6 +16,11 @@
   --font-lobster: var(--font-lobster-family);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);

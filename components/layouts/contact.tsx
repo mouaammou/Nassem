@@ -6,7 +6,7 @@ export default function Contact() {
   const t = useTranslations('Contact');
 
   return (
-    <section className="py-24 bg-linear-to-b from-gray-50 to-white">
+    <section id='contact' className="py-24 bg-linear-to-b from-gray-50 to-white">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">

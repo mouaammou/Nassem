@@ -1,7 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Languages } from 'lucide-react';
 import clsx from 'clsx';
 import { useLocale } from 'next-intl';
@@ -13,14 +13,15 @@ export default function Navbar() {
   const locale = useLocale();
   const router = useRouter();
   const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const isRTL = locale === 'ar';
-  const fontClass = isRTL ? 'font-baloo' : 'font-rubik'; // add this
+  const fontClass = isRTL ? 'font-baloo' : 'font-rubik';
 
   const links = [
     { href: '/', label: t('home') },
-    { href: '/product', label: t('product') },
-    { href: '/about', label: t('about') },
-    { href: '/contact', label: t('contact') },
+    { href: '#produit', label: t('product') },
+    { href: '#about', label: t('about') },
+    { href: '#contact', label: t('contact') },
   ];
 
   const switchLanguage = () => {
@@ -28,11 +29,30 @@ export default function Navbar() {
     router.replace(pathname, { locale: newLocale });
   };
 
-  return (
-    <nav className={`bg-white fixed w-full top-0 z-50 ${fontClass}`} dir={isRTL ? 'rtl' : 'ltr'}>
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.getElementById('hero');
+      if (heroSection) {
+        const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+        setIsScrolled(window.scrollY > heroBottom);
+      }
+    };
 
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <nav 
+      className={clsx(
+        'fixed w-full top-0 z-50 transition-all duration-300',
+        fontClass,
+        isScrolled ? 'bg-white shadow-xs py-2' : 'bg-sky-100'
+      )} 
+      dir={isRTL ? 'rtl' : 'ltr'}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="flex items-center justify-between h-18 py-1">
           {/* Logo */}
           <Link href="/" className="">
             <div className="">
@@ -41,9 +61,9 @@ export default function Navbar() {
                 height={60}
                 alt='Inhaler logo'
                 src="/logo.png"
-                className='rounded-full'
+                className='rounded-full w-12'
               />
-              <h1 className='font-lobster text-xl'>Nassem</h1>
+              <h1 className='font-lobster text-lg text-sky-700'>Nassem</h1>
             </div>
           </Link>
 

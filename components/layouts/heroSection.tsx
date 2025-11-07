@@ -1,8 +1,8 @@
 'use client';
 import Image from "next/image";
 import { useTranslations, useLocale } from 'next-intl';
-import { Heart, Shield, ArrowRight, Smartphone } from 'lucide-react';
 import DownloadButtons from "../ui/DownloadButtons";
+import { motion } from 'framer-motion'
 
 export default function Hero() {
    const t = useTranslations('Hero');
@@ -28,7 +28,7 @@ export default function Hero() {
    ];
 
    return (
-      <section className="relative py-16 mt-20 overflow-hidden">
+      <section className="relative py-16 mt-18 overflow-hidden" id="hero">
          {/* Background - Sky blue with angled edge */}
          <div
             className={`absolute inset-y-0 w-220 bg-sky-100 -z-10 h-full ${isRTL ? 'right-0' : 'left-0'
@@ -60,30 +60,40 @@ export default function Hero() {
                </div>
 
                {/* right Image */}
-               <div>
+               <motion.div
+                  initial={{ y: 0 }}
+                  whileInView={{ y: [0, -20, 0] }} // moves up 20px then back
+                  transition={{
+                     duration: 2,       // speed of one full up-down cycle
+                     repeat: Infinity,  // repeat forever
+                     ease: "easeInOut", // smooth motion
+                  }}
+                  viewport={{ once: false, amount: 0.5 }} // active when in view
+               >
                   <div className={`relative transform-gpu origin-center ${!isRTL ? 'rotate-6 md:rotate-10' : '-rotate-6 md:-rotate-10'}`}>
                      {/* iPhone mockup frame */}
-                     <div className="relative bg-black rounded-[3rem] p-3 shadow-2xl">
+                     <div className="relative bg-black rounded-[3rem] p-2 shadow-2xl w-[280px] h-[570px] md:w-[320px] md:h-[650px]">
                         {/* Notch */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-7 bg-black rounded-b-3xl z-10"></div>
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-b-3xl z-10"></div>
 
                         {/* Screen */}
-                        <div className="relative bg-white rounded-[2.5rem] overflow-hidden">
+
+                        <div className="relative bg-white rounded-[2.5rem] overflow-hidden w-full h-full">
                            <Image
-                              width={400}
-                              height={800}
+                              width={1000}
+                              height={1650}
                               src="/appFeatures/app-feature-7.png"
                               alt="Mobile app connected to smart inhaler"
-                              className="w-84 h-150 object-contain"
+                              className="w-full h-full object-contain"
                               priority
                            />
                         </div>
 
                         {/* Home indicator */}
-                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-gray-800 rounded-full"></div>
+                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-32 h-1 bg-gray-800 rounded-full"></div>
                      </div>
                   </div>
-               </div>
+               </motion.div>
 
             </div>
 

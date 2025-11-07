@@ -40,7 +40,7 @@ export default function AppFeatures() {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20 pt-40" id='produit'>
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -62,12 +62,12 @@ export default function AppFeatures() {
               {/* Image Section */}
               <div className="">
                 <div className="relative">
-                    <img
+                    <Image
                       src={feature.image}
                       alt={feature.title}
-                      width={1600}
-                      height={1400}
-                      className="sm:w-full sm:h-190 object-cover"
+                      width={1000}
+                      height={1}
+                      className="w-full h-140 lg:h-200 object-cover"
                     />
                 </div>
               </div>
