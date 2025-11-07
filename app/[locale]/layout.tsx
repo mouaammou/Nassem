@@ -43,7 +43,6 @@ export default async function RootLayout({
   params: { locale: string };
 }) {
   const { locale } = await params;
-  console.log("local::: ", locale);
 
   // detect direction: Arabic = rtl, otherwise ltr
   const dir = locale === "ar" ? "rtl" : "ltr";
