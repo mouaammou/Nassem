@@ -43,6 +43,7 @@ export default function Contact() {
               <a 
                 href={`tel:${t('phone', { defaultValue: '+1 (555) 123-4567' })}`}
                 className="text-gray-600 hover:text-green-600 transition-colors"
+                 dir="ltr"
               >
                 {t('phone', { defaultValue: '+1 (555) 123-4567' })}
               </a>

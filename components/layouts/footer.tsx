@@ -18,7 +18,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <div className="flex items-center gap-2">
-                <Image 
+                <Image
                   width={50}
                   height={50}
                   alt='Nassem logo'
@@ -83,7 +83,9 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-2 text-gray-600 text-sm">
                 <Phone size={18} className="mt-0.5 shrink-0" />
-                <a href={`tel:${tContact('phone')}`} className="hover:text-blue-600 transition-colors">
+                <a href={`tel:${tContact('phone')}`} className="hover:text-blue-600 transition-colors"
+                  dir="ltr"
+                >
                   {tContact('phone')}
                 </a>
               </li>
