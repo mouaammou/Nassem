@@ -30,10 +30,21 @@ const lobsterTwo = Lobster_Two({
   variable: '--font-lobster-two-family',
 })
 
-export const metadata: Metadata = {
-  title: "Nassem - Smart Inhaler App",
-  description: "Transform your asthma management with our innovative smart inhaler application",
+const metaByLocale: Record<string, Metadata> = {
+  fr: {
+    title: "Nassem - Application intelligente pour inhalateur",
+    description: "Révolutionnez la gestion de l'asthme grâce à Nassem, l'application intelligente pour inhalateurs. Suivi facile, notifications personnalisées et conseils santé en temps réel.",
+  },
+  ar: {
+    title: "نسيم - تطبيق ذكي لجهاز الاستنشاق",
+    description: "حوّل إدارة الربو مع نسيم، تطبيق ذكي لجهاز الاستنشاق. متابعة سهلة، إشعارات مخصصة، ونصائح صحية لحظية.",
+  },
 };
+
+export async function generateMetadata({ params }: any): Promise<Metadata> {
+  const { locale } = await params || 'fr'; // fallback to fr
+  return metaByLocale[locale];
+}
 
 export default async function RootLayout({
   children,
